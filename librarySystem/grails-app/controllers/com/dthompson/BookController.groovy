@@ -2,5 +2,5 @@ package com.dthompson
 
 class BookController {
 
-    def index() { }
+    def scaffold= Book
 }
