@@ -4,7 +4,7 @@ class BootStrap {
 
 def init = { servletContext ->
 
-def course1= new Course( 
+/*def course1= new Course( 
 
 title:'BSc Hon',
 
@@ -90,7 +90,7 @@ datecreated:new Date('02/03/2014'),
 
 student:student1,
 
-review:'Didnt like it').save() 
+review:'Didnt like it').save() */
 
  
 
