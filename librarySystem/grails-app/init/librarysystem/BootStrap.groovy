@@ -18,6 +18,34 @@ description:'Example Description',
 
 studyMode:'Online').save()
 
+def library1= new Library( 
+
+building:'Maxwell',
+
+address:'Green Street',
+
+openingHours:'07:00-18:00',
+
+location:'Sheffield',
+
+studySpaces:'Computer Rooms, Silent Rooms').save()
+
+def student1= new Student( 
+
+name:'Alison Nemesi',
+
+email:'Aneme@uni.org',
+
+username:'ANEME2',
+
+password:'Witness',
+
+studentId:'53',
+
+course:course1,
+
+locallibrary:library1).save()
+
 def librarian1= new Librarian( 
 
 name:'Sandra',
@@ -32,19 +60,7 @@ password:'imthebest',
 
 telephone:'01234567483',
 
-library:'Maxwell').save() 
-
-def library1= new Library( 
-
-building:'Maxwell',
-
-address:'Green Street',
-
-openingHours:'07:00-18:00',
-
-location:'Sheffield',
-
-studySpaces:'Computer Rooms, Silent Rooms').save()
+library:library1).save() 
 
 def book1= new Book( 
 
@@ -60,33 +76,23 @@ dateBorrowed:new Date('23/01/2015'),
 
 returnDate:new Date('25/06/2017'),
 
-student:'Allen James',
+student:student1,
 
-overdue:'No').save() 
+overdue:'No',
+
+availableAt:library1).save() 
 
 def bookreview1= new BookReview( 
 
-book:'IT',
+book:book1,
 
 datecreated:new Date('02/03/2014'),
 
-student:'James Pollon',
+student:student1,
 
 review:'Didnt like it').save() 
 
-def student1= new Student( 
-
-name:'Alison Nemesi',
-
-email:'Aneme@uni.org',
-
-username:'ANEME2',
-
-password:'Witness',
-
-studentId:'53',
-
-course:course1).save() 
+ 
 
 }
 

@@ -14,9 +14,11 @@ Date dateBorrowed
 
 Date returnDate
 
-String student
+Student student
 
 String overdue
+
+Library availableAt
 
     static constraints = {
 
@@ -34,7 +36,13 @@ returnDate blank:false, nullable:false, maxSize:10
 
 student blank:false, nullable:false
 
-overdue blank:false, nullable:false, maxSize:3
+overdue blank:false, nullable:false
+
+availableAt blank:false, nullable:false
 
     }
+
+  static hasMany={bookreviews:BookReview}
+
+  
 }
