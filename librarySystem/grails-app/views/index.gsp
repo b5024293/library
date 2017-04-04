@@ -7,42 +7,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 </head>
 <body>
-    <content tag="nav">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
-                <li><a href="#">App profile: ${grailsApplication.config.grails?.profile}</a></li>
-                <li><a href="#">App version:
-                    <g:meta name="info.app.version"/></a>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Grails version:
-                    <g:meta name="info.app.grailsVersion"/></a>
-                </li>
-                <li><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>
-                <li><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>
-                <li><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>
-                <li><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>
-                <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                    <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
-                </g:each>
-            </ul>
-        </li>
+    
     </content>
 
     <div class="svg" role="presentation">
@@ -59,18 +24,52 @@
                You can find information about our books, libraries, staff members and fellow students book reviews on this website.
             </p>
 
-            <div id="controllers" role="navigation">
-                <h2>Available Controllers:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                        </li>
-                    </g:each>
-                </ul>
-            </div>
+           
         </section>
     </div>
-
+<div class="first">
+<h3>View Information</h3>
+<p> </p>
+<button type="button" class="btn btn-success">
+<g:link controller="course" action="index">Courses</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="student" action="index">Students</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="library" action="index">Libraries</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="librarian" action="index">Librarians</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="book" action="index">Books</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="bookReview" action="index">Book Reviews</g:link>
+</button>
+</div>
+<div class="first">
+<h3>Enter New Information</h3>
+<p> </p>
+<button type="button" class="btn btn-success">
+<g:link controller="course" action="create">Courses</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="student" action="create">Students</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="library" action="create">Libraries</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="librarian" action="create">Librarians</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="book" action="create">Books</g:link>
+</button>
+<button type="button" class="btn btn-success">
+<g:link controller="bookReview" action="create">Book Reviews</g:link>
+</button>
+</div>
 </body>
 </html>
