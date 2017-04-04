@@ -29,4 +29,6 @@ description blank:false, nullable:false, maxSize:3000, widget:'textarea'
 studyMode blank:false, nullable:false, maxSize:20
 
     }
+
+   static hasMany={students:Student}
 }

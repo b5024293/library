@@ -86,7 +86,7 @@ password:'Witness',
 
 studentId:'53',
 
-course:'Networking').save() 
+course:course1).save() 
 
 }
 
